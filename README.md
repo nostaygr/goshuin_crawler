@@ -1,0 +1,2 @@
+# goshuin_crawler
+goshuinプロジェクトのための寺社仏閣クローラー管理リポジトリ
