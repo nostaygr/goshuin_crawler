@@ -25,12 +25,12 @@ def parse_worship_page(link):
             if th_text == "所在地":
                 place = row.find("td").text.encode('utf-8')
             if th_text == "位置":
-                ll = row.find("span", {"class": "plainlinks"}).text.encode('utf-8').replace('\n', '')
+                location = row.find("span", {"class": "plainlinks"}).text.encode('utf-8').replace('\n', '')
 
         info = {}
         info["title"] = title
         info["place"] = place
-        info["ll"] = ll
+        info["location"] = location
     except:
         raise
 
@@ -62,7 +62,7 @@ def main():
     for worship in worship_dic:
         try:
             worship_info = parse_worship_page(worship_dic[worship]["link"])
-            print worship, worship_info["place"], worship_info["ll"]
+            print worship, worship_info["place"], worship_info["location"]
         except:
             continue
 
