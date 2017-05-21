@@ -39,7 +39,7 @@ def parse_worship_page(link):
 
 def main():
     # get base url
-    url = URL_BASE + "/wiki/%E7%A5%9E%E7%A4%BE%E4%B8%80%E8%A6%A7"
+    url = URL_BASE + "/wiki/神社一覧"
     res = requests.get(url)
     res.encoding = res.apparent_encoding
     soup = BeautifulSoup(res.text, "html.parser")
