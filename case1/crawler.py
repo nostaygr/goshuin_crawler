@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 URL_BASE = "https://ja.wikipedia.org"
-WORSHIP_JUDGE_LIST = ["社", "宮", "稲荷"]
+WORSHIP_JUDGE_LIST = ["社", "宮", "荷"]
 
 
 def parse_worship_page(link):
@@ -14,9 +14,14 @@ def parse_worship_page(link):
     res.encoding = res.apparent_encoding
     soup = BeautifulSoup(res.text, "html.parser")
 
-    title = soup.find("h1", {"id": "firstHeading"}).text.encode('utf-8')
     try:
         table = soup.find("table", {"class": "infobox"})
+        base_title = table.find("tr").find("th")
+        decision_char = base_title.text[-1].encode('utf-8')
+        if decision_char not in WORSHIP_JUDGE_LIST:
+            raise
+        title = base_title.text.encode('utf-8')
+
         rows = table.find_all("tr")
         for row in rows:
             if not row.find("th"):
@@ -53,16 +58,18 @@ def main():
     for worship in worship_list:
         if not worship.text:
             continue
-        if worship.text[len(worship.text) - 1].encode('utf-8') in WORSHIP_JUDGE_LIST:
-            worship_name = worship.text.encode('utf-8')
-            worship_dic[worship_name] = {}
+        worship_name = worship.text.encode('utf-8')
+        worship_dic[worship_name] = {}
+        try:
             worship_dic[worship_name]["link"] = worship.get("href").encode('utf-8')
+        except:
+            continue
 
     # parse indivisual worship page
     for worship in worship_dic:
         try:
             worship_info = parse_worship_page(worship_dic[worship]["link"])
-            print worship, worship_info["place"], worship_info["location"]
+            print worship_info["title"], worship_info["place"], worship_info["location"]
         except:
             continue
 
