@@ -25,7 +25,7 @@ def parse_worship_page(link):
             if th_text == "所在地":
                 place = row.find("td").text.encode('utf-8')
             if th_text == "位置":
-                ll = row.find("span", {"class": "plainlinks"}).text.encode('utf-8').replace('\n','')
+                ll = row.find("span", {"class": "plainlinks"}).text.encode('utf-8').replace('\n', '')
 
         info = {}
         info["title"] = title
@@ -37,33 +37,35 @@ def parse_worship_page(link):
     return info
 
 
-# get base url
-url = URL_BASE + "/wiki/%E7%A5%9E%E7%A4%BE%E4%B8%80%E8%A6%A7"
-res = requests.get(url)
-res.encoding = res.apparent_encoding
-soup = BeautifulSoup(res.text, "html.parser")
+def main():
+    # get base url
+    url = URL_BASE + "/wiki/%E7%A5%9E%E7%A4%BE%E4%B8%80%E8%A6%A7"
+    res = requests.get(url)
+    res.encoding = res.apparent_encoding
+    soup = BeautifulSoup(res.text, "html.parser")
+
+    # parse worship list
+    content = soup.find("div", {"id": "mw-content-text"})
+    worship_list = content.find_all("a")
+
+    # parse worship link
+    worship_dic = {}
+    for worship in worship_list:
+        if not worship.text:
+            continue
+        if worship.text[len(worship.text) - 1].encode('utf-8') in WORSHIP_JUDGE_LIST:
+            worship_name = worship.text.encode('utf-8')
+            worship_dic[worship_name] = {}
+            worship_dic[worship_name]["link"] = worship.get("href").encode('utf-8')
+
+    # parse indivisual worship page
+    for worship in worship_dic:
+        try:
+            worship_info = parse_worship_page(worship_dic[worship]["link"])
+            print worship, worship_info["place"], worship_info["ll"]
+        except:
+            continue
 
 
-# parse worship list
-content = soup.find("div", {"id": "mw-content-text"})
-worship_list = content.find_all("a")
-
-
-# parse worship link
-worship_dic = {}
-for worship in worship_list:
-    if not worship.text:
-        continue
-    if worship.text[len(worship.text) - 1].encode('utf-8') in WORSHIP_JUDGE_LIST:
-        worship_name = worship.text.encode('utf-8')
-        worship_dic[worship_name] = {}
-        worship_dic[worship_name]["link"] = worship.get("href").encode('utf-8')
-
-
-# parse indivisual worship page
-for worship in worship_dic:
-    try:
-        worship_info = parse_worship_page(worship_dic[worship]["link"])
-        print worship, worship_info["place"], worship_info["ll"]
-    except:
-        continue
+if __name__ == '__main__':
+    main()
