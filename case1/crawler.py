@@ -1,13 +1,18 @@
 # coding: utf-8
 
+import sys
 import requests
 from bs4 import BeautifulSoup
+sys.path.append("lib")
+import api
 
 
 URL_BASE = "https://ja.wikipedia.org"
 WORSHIP_JUDGE_LIST = ["社", "宮", "荷"]
+IS_TEMPLE = "0"
 
 
+# wikipediaのinfobox欄をparse
 def parse_worship_page(link):
     url = URL_BASE + link
     res = requests.get(url)
@@ -17,27 +22,47 @@ def parse_worship_page(link):
     try:
         table = soup.find("table", {"class": "infobox"})
         base_title = table.find("tr").find("th")
-        decision_char = base_title.text[-1].encode('utf-8')
-        if decision_char not in WORSHIP_JUDGE_LIST:
-            raise
-        title = base_title.text.encode('utf-8')
-
-        rows = table.find_all("tr")
-        for row in rows:
-            if not row.find("th"):
-                continue
-            th_text = row.find("th").text.encode('utf-8')
-            if th_text == "所在地":
-                address = row.find("td").text.encode('utf-8')
-            if th_text == "位置":
-                latlng = row.find("span", {"class": "plainlinks"}).text.encode('utf-8').replace('\n', '')
-
-        info = {}
-        info["title"] = title
-        info["address"] = address
-        info["latlng"] = latlng
     except:
+        print "can't find infobox"
         raise
+    decision_char = base_title.text[-1].encode('utf-8')
+    if decision_char not in WORSHIP_JUDGE_LIST:
+        print "this is not worship page"
+        raise
+
+    title = base_title.text.encode('utf-8')
+    rows = table.find_all("tr")
+    for row in rows:
+        if not row.find("th"):
+            continue
+        th_text = row.find("th").text.encode('utf-8')
+        if th_text == "所在地":
+            address = row.find("td").text.encode('utf-8').replace('\n', '')
+        if th_text == "主祭神":
+            obj = row.find("td").text.encode('utf-8').replace('\n', ',')
+
+    try:
+        address
+    except:
+        address = ""
+
+    try:
+        obj
+    except:
+        obj = ""
+
+    try:
+        lat, lng = api.convert_address_to_latlng(address)
+    except:
+        lat = lng = 0
+
+    info = {}
+    info["title"] = title
+    info["address"] = address
+    info["lat"] = str(lat)
+    info["lng"] = str(lng)
+    info["rank"] = ""
+    info["obj"] = obj
 
     return info
 
@@ -51,27 +76,61 @@ def main():
 
     # parse worship list
     content = soup.find("div", {"id": "mw-content-text"})
-    worship_list = content.find_all("a")
+    a_tag_list = content.find_all("a")
 
     # parse worship link
-    worship_dic = {}
-    for worship in worship_list:
-        if not worship.text:
+    worship_link_dic = {}
+    for a_tag in a_tag_list:
+        if not a_tag.text:
             continue
-        worship_name = worship.text.encode('utf-8')
-        worship_dic[worship_name] = {}
         try:
-            worship_dic[worship_name]["link"] = worship.get("href").encode('utf-8')
+            link = a_tag.get("href").encode('utf-8')
+            worship_name = a_tag.text.encode('utf-8')
+            worship_link_dic[worship_name] = link
         except:
             continue
 
     # parse indivisual worship page
-    for worship in worship_dic:
+    place_id = num = 1
+    print "総クロール数は %d" % len(worship_link_dic)
+    worship_dic = {}
+    for worship in worship_link_dic:
         try:
-            worship_info = parse_worship_page(worship_dic[worship]["link"])
-            print worship_info["title"], worship_info["address"], worship_info["latlng"]
+            worship_info = parse_worship_page(worship_link_dic[worship])
+            worship_dic[worship] = {}
+            worship_dic[worship]["info"] = worship_info
+            worship_dic[worship]["place_id"] = str(place_id)
+
+            print "%d parse成功 : %s" % (num, worship)
+            place_id += 1
         except:
-            continue
+            print "%d parse失敗 : %s" % (num, worship)
+
+        num += 1
+
+    # output worship_places data
+    output_fn = 'res/worship_places'
+    with open(output_fn, 'w') as f:
+        for worship in worship_dic:
+            f.write(
+                worship_dic[worship]["place_id"] + ',' + \
+                worship_dic[worship]["info"]["title"] + ',' + \
+                worship_dic[worship]["info"]["title"] + ',' + \
+                IS_TEMPLE + ',' + \
+                worship_dic[worship]["info"]["address"] + ',' + \
+                worship_dic[worship]["info"]["lat"] + ',' + \
+                worship_dic[worship]["info"]["lng"] + '\n'
+            )
+
+    # output shrines data
+    output_fn = 'res/shrines'
+    with open(output_fn, 'w') as f:
+        for worship in worship_dic:
+            f.write(
+                worship_dic[worship]["place_id"] + ',' + \
+                worship_dic[worship]["info"]["rank"] + ',' + \
+                worship_dic[worship]["info"]["obj"] + '\n'
+            )
 
 
 if __name__ == '__main__':
