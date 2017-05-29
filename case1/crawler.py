@@ -92,7 +92,7 @@ def main():
 
     # parse indivisual worship page
     place_id = num = 1
-    print "総クロール数は %d" % len(worship_link_dic)
+    len_worship_link_dic = len(worship_link_dic)
     worship_dic = {}
     for worship in worship_link_dic:
         try:
@@ -101,10 +101,10 @@ def main():
             worship_dic[worship]["info"] = worship_info
             worship_dic[worship]["place_id"] = str(place_id)
 
-            print "%d parse成功 : %s" % (num, worship)
+            print "%d/%d parse成功 : %s" % (num, len_worship_link_dic, worship)
             place_id += 1
         except:
-            print "%d parse失敗 : %s" % (num, worship)
+            print "%d/%d parse失敗 : %s" % (num, len_worship_link_dic, worship)
 
         num += 1
 
