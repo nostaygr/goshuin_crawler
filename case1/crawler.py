@@ -91,7 +91,7 @@ def main():
             continue
 
     # parse indivisual worship page
-    place_id = num = 1
+    num = 1
     len_worship_link_dic = len(worship_link_dic)
     worship_dic = {}
     for worship in worship_link_dic:
@@ -99,35 +99,24 @@ def main():
             worship_info = parse_worship_page(worship_link_dic[worship])
             worship_dic[worship] = {}
             worship_dic[worship]["info"] = worship_info
-            worship_dic[worship]["place_id"] = str(place_id)
 
             print "%d/%d parse成功 : %s" % (num, len_worship_link_dic, worship)
-            place_id += 1
         except:
             print "%d/%d parse失敗 : %s" % (num, len_worship_link_dic, worship)
 
         num += 1
 
     # output worship_places data
-    output_fn = 'res/worship_places'
+    output_fn = 'res/shrines_base'
     with open(output_fn, 'w') as f:
         for worship in worship_dic:
             f.write(
-                worship_dic[worship]["place_id"] + ',' + \
                 worship_dic[worship]["info"]["title"] + ',' + \
                 worship_dic[worship]["info"]["title"] + ',' + \
                 IS_TEMPLE + ',' + \
                 worship_dic[worship]["info"]["address"] + ',' + \
                 worship_dic[worship]["info"]["lat"] + ',' + \
-                worship_dic[worship]["info"]["lng"] + '\n'
-            )
-
-    # output shrines data
-    output_fn = 'res/shrines'
-    with open(output_fn, 'w') as f:
-        for worship in worship_dic:
-            f.write(
-                worship_dic[worship]["place_id"] + ',' + \
+                worship_dic[worship]["info"]["lng"] + ',' + \
                 worship_dic[worship]["info"]["rank"] + ',' + \
                 worship_dic[worship]["info"]["obj"] + '\n'
             )
