@@ -39,7 +39,7 @@ def parse_worship_page(link):
         if th_text == "所在地":
             address = row.find("td").text.encode('utf-8').replace('\n', '')
         if th_text == "主祭神":
-            obj = row.find("td").text.encode('utf-8').replace('\n', ',')
+            obj = row.find("td").text.encode('utf-8').replace('\n', ',').replace(',', '・')
 
     try:
         address
