@@ -33,8 +33,6 @@ def main():
 
         num += 1
 
-    print temple_dic
-
     # output temple_places data
     output_fn = 'res/temples_base'
     with open(output_fn, 'w') as f:
