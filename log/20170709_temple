@@ -1,0 +1,743 @@
+if [ ! -d res ]; then mkdir -p res; fi
+python temple/crawler.py
+1/543 parse成功 : 孝恩寺
+can't find infobox
+2/543 parse失敗 : 煩悩
+3/543 parse成功 : 西本願寺
+4/543 parse成功 : 久遠寺
+can't find infobox
+5/543 parse失敗 : 明王
+6/543 parse成功 : 羽賀寺
+this is not temple page
+7/543 parse失敗 : 大中寺
+this is not temple page
+8/543 parse失敗 : 朝鮮
+this is not temple page
+9/543 parse失敗 : 道樹寺
+can't find infobox
+10/543 parse失敗 : 表
+11/543 parse成功 : 千手院
+12/543 parse失敗 : 歴
+can't find infobox
+13/543 parse失敗 : 大正新脩大蔵経
+this is not temple page
+14/543 parse失敗 : 本行院
+15/543 parse成功 : 法観寺
+this is not temple page
+16/543 parse失敗 : 大須観音
+17/543 parse成功 : 大樹寺
+18/543 parse成功 : 道成寺
+19/543 parse成功 : 金剛峯寺
+can't find infobox
+20/543 parse失敗 : 菩提
+21/543 parse成功 : 法然院
+can't find infobox
+22/543 parse失敗 : 漢訳
+can't find infobox
+23/543 parse失敗 : 僧
+this is not temple page
+24/543 parse失敗 : 當麻寺
+25/543 parse成功 : 大報恩寺
+26/543 parse成功 : 梅林寺
+27/543 parse成功 : 本遠寺
+28/543 parse成功 : 広隆寺
+29/543 parse成功 : 佛光寺
+can't find infobox
+30/543 parse失敗 : 話
+can't find infobox
+31/543 parse失敗 : 原始仏教
+32/543 parse成功 : 等持院
+can't find infobox
+33/543 parse失敗 : 編集
+34/543 parse成功 : 妙法寺
+can't find infobox
+35/543 parse失敗 : 恵日寺
+can't find infobox
+36/543 parse失敗 : 経蔵
+37/543 parse成功 : 永平寺
+38/543 parse成功 : 法華寺
+this is not temple page
+39/543 parse失敗 : 日向薬師
+40/543 parse成功 : 醍醐寺
+41/543 parse成功 : 行願寺
+42/543 parse成功 : 臨済寺
+43/543 parse成功 : 三仏寺
+44/543 parse成功 : 長命寺
+can't find infobox
+45/543 parse失敗 : 漢訳大蔵経
+46/543 parse成功 : 日泰寺
+47/543 parse成功 : 與田寺
+48/543 parse成功 : 普門寺
+49/543 parse成功 : 慈恩寺
+this is not temple page
+50/543 parse失敗 : 来迎院
+51/543 parse成功 : 池上本門寺
+52/543 parse成功 : 法善寺
+53/543 parse成功 : 退蔵院
+54/543 parse成功 : 神峯山寺
+can't find infobox
+55/543 parse失敗 : 日本
+56/543 parse成功 : 秋篠寺
+57/543 parse成功 : 永源寺
+58/543 parse成功 : 金戒光明寺
+59/543 parse成功 : 室生寺
+60/543 parse成功 : 薬王寺
+this is not temple page
+61/543 parse失敗 : 向源寺
+62/543 parse成功 : 宝山寺
+63/543 parse成功 : 正法寺
+64/543 parse成功 : 宝泉院
+65/543 parse成功 : 教王護国寺
+66/543 parse成功 : 中尊寺
+67/543 parse成功 : 一乗寺
+68/543 parse成功 : 大峯山寺
+69/543 parse成功 : 如意輪寺
+this is not temple page
+70/543 parse失敗 : 威徳寺 (新潟市)
+71/543 parse成功 : 寛永寺
+can't find infobox
+72/543 parse失敗 : 瑞泉寺
+73/543 parse成功 : 金剛輪寺
+74/543 parse成功 : 大蓮寺
+75/543 parse成功 : 法隆寺
+76/543 parse成功 : 智恩寺
+can't find infobox
+77/543 parse失敗 : 諸法無我
+78/543 parse成功 : 高山寺
+79/543 parse成功 : 金峯山寺
+this is not temple page
+80/543 parse失敗 : 西蔵訳
+81/543 parse成功 : 唐招提寺
+82/543 parse成功 : 楽法寺
+83/543 parse成功 : 成相寺
+84/543 parse成功 : 鰐淵寺
+85/543 parse成功 : 随願寺
+can't find infobox
+86/543 parse失敗 : 垂迹神
+this is not temple page
+87/543 parse失敗 : 歓喜院
+88/543 parse成功 : 清見寺
+89/543 parse成功 : 泉岳寺
+can't find infobox
+90/543 parse失敗 : 三宝
+this is not temple page
+91/543 parse失敗 : 釈迦
+92/543 parse成功 : 西福寺
+93/543 parse成功 : 清浄華院
+94/543 parse成功 : 称名寺
+95/543 parse成功 : 東寺
+96/543 parse成功 : 龍安寺
+97/543 parse成功 : 安国寺
+98/543 parse成功 : 清白寺
+99/543 parse成功 : 光明寺
+100/543 parse成功 : 霊山寺
+101/543 parse成功 : 知恩寺
+can't find infobox
+102/543 parse失敗 : 三宝院
+can't find infobox
+103/543 parse失敗 : 密教
+can't find infobox
+104/543 parse失敗 : 信仰対象
+105/543 parse成功 : 滝山寺
+can't find infobox
+106/543 parse失敗 : 普済寺
+107/543 parse成功 : 大國寺
+can't find infobox
+108/543 parse失敗 : 大乗仏教
+109/543 parse成功 : 總持寺
+can't find infobox
+110/543 parse失敗 : 律蔵
+this is not temple page
+111/543 parse失敗 : 向嶽寺
+can't find infobox
+112/543 parse失敗 : 大照院
+113/543 parse成功 : 知恩院
+114/543 parse成功 : 丈六寺
+can't find infobox
+115/543 parse失敗 : 部派仏教
+can't find infobox
+116/543 parse失敗 : ベトナム
+can't find infobox
+117/543 parse失敗 : 縁起
+118/543 parse成功 : 大聖観音寺
+119/543 parse成功 : 輪王寺
+120/543 parse成功 : 霊雲寺
+can't find infobox
+121/543 parse失敗 : 五色不動
+this is not temple page
+122/543 parse失敗 : 孤篷庵
+123/543 parse成功 : 観心寺
+124/543 parse成功 : 中山寺
+125/543 parse成功 : 毛越寺
+126/543 parse成功 : 天龍寺
+127/543 parse成功 : 温泉寺
+128/543 parse成功 : 東福寺
+129/543 parse成功 : 華厳寺
+can't find infobox
+130/543 parse失敗 : チベット
+131/543 parse成功 : 上品蓮台寺
+132/543 parse成功 : 西教寺
+133/543 parse成功 : 法住寺
+can't find infobox
+134/543 parse失敗 : 霊場
+135/543 parse成功 : 帯解寺
+can't find infobox
+136/543 parse失敗 : 威徳寺
+137/543 parse成功 : 般若寺
+138/543 parse成功 : 百済寺
+139/543 parse成功 : 野中寺
+can't find infobox
+140/543 parse失敗 : 仏教系新宗教
+can't find infobox
+141/543 parse失敗 : 三法印
+142/543 parse成功 : 成田山新勝寺
+can't find infobox
+143/543 parse失敗 : 一切皆苦
+144/543 parse成功 : 万寿寺
+can't find infobox
+145/543 parse失敗 : 唯識
+can't find infobox
+146/543 parse失敗 : インド
+147/543 parse成功 : 竹林寺
+can't find infobox
+148/543 parse失敗 : 大雲寺
+149/543 parse成功 : 東光寺
+150/543 parse成功 : 廬山寺
+151/543 parse成功 : 善通寺
+this is not temple page
+152/543 parse失敗 : 世親
+153/543 parse成功 : 相国寺
+this is not temple page
+154/543 parse失敗 : ルンビニー
+can't find infobox
+155/543 parse失敗 : 神仏習合
+156/543 parse成功 : 本圀寺
+157/543 parse成功 : 安倍文殊院
+158/543 parse成功 : 白毫寺
+159/543 parse成功 : 大聖寺
+160/543 parse成功 : 興福寺
+161/543 parse成功 : 西明寺
+this is not temple page
+162/543 parse失敗 : 元興寺
+163/543 parse成功 : 大聖勝軍寺
+164/543 parse成功 : 南禅院
+165/543 parse成功 : 中宮寺
+166/543 parse成功 : 清凉寺
+167/543 parse成功 : 朝光寺
+168/543 parse成功 : 土佐国分寺
+169/543 parse成功 : 月照寺
+170/543 parse成功 : 松尾寺
+171/543 parse成功 : 紀三井寺
+172/543 parse成功 : 大善寺
+173/543 parse成功 : 勝常寺
+can't find infobox
+174/543 parse失敗 : 普光寺
+175/543 parse成功 : 総持寺
+176/543 parse成功 : 施福寺
+177/543 parse成功 : 神呪寺
+178/543 parse成功 : 本法寺
+this is not temple page
+179/543 parse失敗 : 天授庵
+can't find infobox
+180/543 parse失敗 : 瑠璃寺
+181/543 parse成功 : 浄瑠璃寺
+can't find infobox
+182/543 parse失敗 : ウィキポータル 仏教
+183/543 parse成功 : 神護寺
+184/543 parse成功 : 実相院
+can't find infobox
+185/543 parse失敗 : スリランカ
+186/543 parse成功 : 海龍王寺
+187/543 parse成功 : 法金剛院
+can't find infobox
+188/543 parse失敗 : 三蔵
+189/543 parse成功 : 勧修寺
+can't find infobox
+190/543 parse失敗 : 仏教
+191/543 parse成功 : 高台寺
+192/543 parse成功 : 海住山寺
+193/543 parse成功 : 南禅寺
+can't find infobox
+194/543 parse失敗 : 国分寺
+195/543 parse成功 : 護国寺
+196/543 parse成功 : 浄土寺
+197/543 parse成功 : 比叡山
+198/543 parse成功 : 清水寺
+199/543 parse成功 : 鹿苑寺
+200/543 parse成功 : 新勝寺
+this is not temple page
+201/543 parse失敗 : 愛知県
+202/543 parse成功 : 頂法寺
+can't find infobox
+203/543 parse失敗 : ヨーロッパ
+204/543 parse成功 : 斑鳩寺
+205/543 parse成功 : 禅瀧寺
+can't find infobox
+206/543 parse失敗 : 修験道
+can't find infobox
+207/543 parse失敗 : も
+this is not temple page
+208/543 parse失敗 : 豊川稲荷
+can't find infobox
+209/543 parse失敗 : む
+can't find infobox
+210/543 parse失敗 : め
+can't find infobox
+211/543 parse失敗 : ゆ
+can't find infobox
+212/543 parse失敗 : や
+can't find infobox
+213/543 parse失敗 : り
+can't find infobox
+214/543 parse失敗 : る
+can't find infobox
+215/543 parse失敗 : よ
+216/543 parse成功 : 飛鳥寺
+217/543 parse成功 : 聖護院
+can't find infobox
+218/543 parse失敗 : わ
+can't find infobox
+219/543 parse失敗 : れ
+220/543 parse成功 : 太山寺
+can't find infobox
+221/543 parse失敗 : を
+can't find infobox
+222/543 parse失敗 : ん
+223/543 parse成功 : 須磨寺
+can't find infobox
+224/543 parse失敗 : 四法印
+225/543 parse成功 : 妙円寺
+226/543 parse成功 : 方広寺
+227/543 parse成功 : 高尾山薬王院
+228/543 parse成功 : 建長寺
+229/543 parse成功 : 霊雲院
+230/543 parse成功 : 瑞峯院
+this is not temple page
+231/543 parse失敗 : 壬生寺
+232/543 parse成功 : 水間寺
+233/543 parse成功 : 大福田寺
+234/543 parse成功 : 本興寺
+235/543 parse成功 : 瑠璃光寺
+can't find infobox
+236/543 parse失敗 : 龍興寺
+237/543 parse成功 : 円成寺
+238/543 parse成功 : 西光寺
+239/543 parse成功 : 弥谷寺
+this is not temple page
+240/543 parse失敗 : 白水阿弥陀堂
+241/543 parse成功 : 南宗寺
+242/543 parse成功 : 三室戸寺
+243/543 parse成功 : 石山寺
+244/543 parse成功 : 福禅寺
+245/543 parse成功 : 増善寺
+246/543 parse成功 : 大仙院
+247/543 parse成功 : 寂光院
+248/543 parse成功 : 根来寺
+249/543 parse成功 : 南法華寺
+250/543 parse成功 : 鷲山寺
+251/543 parse成功 : 蟹満寺
+252/543 parse成功 : 愛宕念仏寺
+253/543 parse成功 : 観音正寺
+this is not temple page
+254/543 parse失敗 : 長勝寺
+255/543 parse成功 : 仏隆寺
+256/543 parse成功 : 大通寺
+257/543 parse成功 : 瑞龍寺
+258/543 parse成功 : 石手寺
+259/543 parse成功 : 金剛三昧院
+this is not temple page
+260/543 parse失敗 : 酬恩庵
+this is not temple page
+261/543 parse失敗 : 五台山
+262/543 parse成功 : 長慶寺
+263/543 parse成功 : 伊予国分寺
+264/543 parse成功 : 大石寺
+265/543 parse成功 : 朝護孫子寺
+can't find infobox
+266/543 parse失敗 : お
+267/543 parse成功 : 花岳寺
+268/543 parse成功 : 専修寺
+269/543 parse成功 : 龍光院
+270/543 parse成功 : 達磨寺
+271/543 parse成功 : 長浜別院 大通寺（長浜御坊〈ながはまごぼう〉）（滋賀県長浜市）→真宗大谷派 長浜別院 大通寺
+272/543 parse成功 : 浄智寺
+can't find infobox
+273/543 parse失敗 : 三業
+274/543 parse成功 : 聖林寺
+275/543 parse成功 : 正福寺
+276/543 parse成功 : 伽耶院
+277/543 parse成功 : 回向院
+278/543 parse成功 : 岡寺
+can't find infobox
+279/543 parse失敗 : 法
+can't find infobox
+280/543 parse失敗 : パーリ語経典
+281/543 parse成功 : 妙心寺
+282/543 parse成功 : 放光寺
+can't find infobox
+283/543 parse失敗 : う
+284/543 parse成功 : 大念仏寺
+285/543 parse成功 : 四天王寺
+286/543 parse成功 : 喜光寺
+287/543 parse成功 : 葛井寺
+can't find infobox
+288/543 parse失敗 : ほ
+can't find infobox
+289/543 parse失敗 : へ
+can't find infobox
+290/543 parse失敗 : み
+can't find infobox
+291/543 parse失敗 : ま
+can't find infobox
+292/543 parse失敗 : ひ
+this is not temple page
+293/543 parse失敗 : 大法寺
+can't find infobox
+294/543 parse失敗 : ふ
+can't find infobox
+295/543 parse失敗 : 如来
+can't find infobox
+296/543 parse失敗 : に
+can't find infobox
+297/543 parse失敗 : な
+can't find infobox
+298/543 parse失敗 : と
+can't find infobox
+299/543 parse失敗 : は
+can't find infobox
+300/543 parse失敗 : の
+can't find infobox
+301/543 parse失敗 : ね
+can't find infobox
+302/543 parse失敗 : ぬ
+303/543 parse成功 : 西芳寺
+can't find infobox
+304/543 parse失敗 : 仏性
+can't find infobox
+305/543 parse失敗 : ち
+can't find infobox
+306/543 parse失敗 : て
+can't find infobox
+307/543 parse失敗 : つ
+can't find infobox
+308/543 parse失敗 : せ
+can't find infobox
+309/543 parse失敗 : 退耕庵
+can't find infobox
+310/543 parse失敗 : す
+311/543 parse成功 : 長谷寺
+can't find infobox
+312/543 parse失敗 : た
+can't find infobox
+313/543 parse失敗 : そ
+314/543 parse成功 : 金蓮寺
+can't find infobox
+315/543 parse失敗 : こ
+can't find infobox
+316/543 parse失敗 : 仏の一覧
+can't find infobox
+317/543 parse失敗 : け
+can't find infobox
+318/543 parse失敗 : し
+can't find infobox
+319/543 parse失敗 : さ
+can't find infobox
+320/543 parse失敗 : か
+can't find infobox
+321/543 parse失敗 : 願徳寺
+322/543 parse成功 : 林昌寺
+can't find infobox
+323/543 parse失敗 : え
+can't find infobox
+324/543 parse失敗 : く
+can't find infobox
+325/543 parse失敗 : き
+can't find infobox
+326/543 parse失敗 : あ
+327/543 parse成功 : 善導寺
+can't find infobox
+328/543 parse失敗 : い
+can't find infobox
+329/543 parse失敗 : 寺院
+this is not temple page
+330/543 parse失敗 : 高野山
+331/543 parse成功 : 喜多院
+332/543 parse成功 : 一畑寺
+333/543 parse成功 : 長保寺
+334/543 parse成功 : 覚園寺
+335/543 parse成功 : 大安寺
+can't find infobox
+336/543 parse失敗 : 西岸寺
+this is not temple page
+337/543 parse失敗 : 豊楽寺
+can't find infobox
+338/543 parse失敗 : 聖典
+339/543 parse成功 : 笠覆寺
+can't find infobox
+340/543 parse失敗 : 八正道
+341/543 parse成功 : 安楽寺
+342/543 parse成功 : 宝厳院
+can't find infobox
+343/543 parse失敗 : 長久寺
+344/543 parse成功 : 鶴林寺
+345/543 parse成功 : 蓮光院初馬寺
+can't find infobox
+346/543 parse失敗 : 諸行無常
+347/543 parse成功 : 青蓮院
+348/543 parse成功 : 青蓮寺
+349/543 parse成功 : 本妙寺
+350/543 parse成功 : 妙法院
+351/543 parse成功 : 観世音寺
+can't find infobox
+352/543 parse失敗 : 本願寺
+can't find infobox
+353/543 parse失敗 : 仏
+354/543 parse成功 : 慈眼院
+355/543 parse成功 : 金林寺
+can't find infobox
+356/543 parse失敗 : 六道
+can't find infobox
+357/543 parse失敗 : 霊峰
+358/543 parse成功 : 長弓寺
+359/543 parse成功 : 伝通院
+360/543 parse成功 : 青岸渡寺
+361/543 parse成功 : 東本願寺
+362/543 parse失敗 : ブッダガヤ
+363/543 parse成功 : 大泉寺（犬山市）
+can't find infobox
+364/543 parse失敗 : ろ
+can't find infobox
+365/543 parse失敗 : 富貴寺
+366/543 parse成功 : 妙蓮寺
+this is not temple page
+367/543 parse失敗 : 太融寺
+368/543 parse成功 : 善光寺
+this is not temple page
+369/543 parse失敗 : 蓮華峰寺
+this is not temple page
+370/543 parse失敗 : パーリ語
+371/543 parse成功 : 慈光院
+372/543 parse成功 : 叡福寺
+373/543 parse成功 : 本禅寺
+374/543 parse成功 : 立石寺
+this is not temple page
+375/543 parse失敗 : 玄奘
+this is not temple page
+376/543 parse失敗 : 妙喜庵
+can't find infobox
+377/543 parse失敗 : 輪廻
+378/543 parse成功 : 童学寺
+379/543 parse成功 : 永保寺
+380/543 parse成功 : 延暦寺
+this is not temple page
+381/543 parse失敗 : 峨眉山
+382/543 parse成功 : 吉田寺
+383/543 parse成功 : 芬陀院
+can't find infobox
+384/543 parse失敗 : 文化財
+385/543 parse成功 : 瑞巌寺
+can't find infobox
+386/543 parse失敗 : 大平寺
+387/543 parse成功 : 曼殊院
+388/543 parse成功 : 善峯寺
+389/543 parse成功 : 東慶寺
+390/543 parse成功 : 本成寺
+391/543 parse成功 : 円覚寺
+this is not temple page
+392/543 parse失敗 : 三十三間堂
+393/543 parse成功 : 千光寺
+394/543 parse成功 : 十輪院
+395/543 parse成功 : 萬福寺
+this is not temple page
+396/543 parse失敗 : 龍吟庵
+can't find infobox
+397/543 parse失敗 : 大龍寺
+398/543 parse成功 : 圓教寺
+can't find infobox
+399/543 parse失敗 : 解脱
+can't find infobox
+400/543 parse失敗 : 中央アメリカ
+401/543 parse成功 : 粉河寺
+402/543 parse成功 : 善福院
+403/543 parse成功 : 如意寺
+404/543 parse成功 : 高徳院
+can't find infobox
+405/543 parse失敗 : 観音寺
+406/543 parse成功 : 西山興隆寺
+407/543 parse成功 : 大山寺
+408/543 parse成功 : 栄山寺
+409/543 parse成功 : 道明寺
+410/543 parse成功 : 崇福寺
+411/543 parse成功 : 願成就院
+412/543 parse成功 : 西大寺
+413/543 parse成功 : 明通寺
+can't find infobox
+414/543 parse失敗 : 業
+415/543 parse成功 : 浅草寺
+this is not temple page
+416/543 parse失敗 : 大日坊
+417/543 parse成功 : 法華経寺
+418/543 parse成功 : 随心院
+419/543 parse成功 : 法起寺
+420/543 parse成功 : 東大寺
+421/543 parse成功 : 鑁阿寺
+422/543 parse成功 : 平間寺
+423/543 parse成功 : 龍角寺
+424/543 parse成功 : 清荒神清澄寺
+425/543 parse成功 : 那谷寺
+this is not temple page
+426/543 parse失敗 : 無著
+427/543 parse成功 : 養源院
+428/543 parse成功 : 新薬師寺
+429/543 parse成功 : 善水寺
+430/543 parse成功 : 平等院
+431/543 parse成功 : 禅林寺
+432/543 parse成功 : 清浄光寺
+can't find infobox
+433/543 parse失敗 : 漢訳仏典一覧
+434/543 parse成功 : 高桐院
+435/543 parse成功 : 大徳寺
+can't find infobox
+436/543 parse失敗 : 論蔵
+can't find infobox
+437/543 parse失敗 : 四苦八苦
+438/543 parse成功 : 恵林寺
+439/543 parse成功 : 桂春院
+can't find infobox
+440/543 parse失敗 : 聖地
+can't find infobox
+441/543 parse失敗 : ウィキプロジェクト 仏教
+442/543 parse成功 : 不退寺
+443/543 parse成功 : 六波羅蜜寺
+can't find infobox
+444/543 parse失敗 : 天部
+445/543 parse成功 : 明王院
+446/543 parse成功 : 大覚寺
+447/543 parse失敗 : 日本の寺院一覧
+can't find infobox
+448/543 parse失敗 : ミャンマー
+can't find infobox
+449/543 parse失敗 : 十大弟子
+can't find infobox
+450/543 parse失敗 : 菩薩
+451/543 parse成功 : 園城寺
+452/543 parse成功 : 法界寺
+453/543 parse成功 : 興山寺
+this is not temple page
+454/543 parse失敗 : 達磨
+455/543 parse成功 : 明月院
+456/543 parse成功 : 増上寺
+457/543 parse成功 : 清龍寺
+458/543 parse成功 : 法輪寺
+can't find infobox
+459/543 parse失敗 : 三毒
+460/543 parse成功 : 誕生寺
+this is not temple page
+461/543 parse失敗 : 龍樹
+462/543 parse成功 : 大谷寺
+463/543 parse成功 : 聖衆来迎寺
+can't find infobox
+464/543 parse失敗 : クシナガラ
+465/543 parse成功 : 不動院
+this is not temple page
+466/543 parse失敗 : 毘沙門堂
+467/543 parse成功 : 三千院
+468/543 parse成功 : 木之本地蔵院
+469/543 parse成功 : 金地院
+can't find infobox
+470/543 parse失敗 : チベット大蔵経
+471/543 parse成功 : 宝厳寺
+472/543 parse成功 : 功山寺
+can't find infobox
+473/543 parse失敗 : 宗教
+474/543 parse成功 : 本山寺
+475/543 parse成功 : 長谷観音
+this is not temple page
+476/543 parse失敗 : 泰平寺
+477/543 parse成功 : 長岳寺
+478/543 parse成功 : 法多山尊永寺
+can't find infobox
+479/543 parse失敗 : サールナート
+480/543 parse成功 : 妙顕寺
+this is not temple page
+481/543 parse失敗 : 柴又帝釈天
+can't find infobox
+482/543 parse失敗 : タイ
+483/543 parse成功 : 穴太寺
+can't find infobox
+484/543 parse失敗 : 仏教の宗派
+485/543 parse成功 : 光前寺
+486/543 parse成功 : 仁和寺
+487/543 parse成功 : 修禅寺
+488/543 parse成功 : 泰岳寺
+489/543 parse成功 : 金剛寺
+490/543 parse成功 : 惣宗寺
+can't find infobox
+491/543 parse失敗 : 基本教義
+492/543 parse成功 : 真正極楽寺
+493/543 parse成功 : 薬師寺
+494/543 parse成功 : 川原寺
+495/543 parse成功 : 建仁寺
+can't find infobox
+496/543 parse失敗 : 熊野三山
+can't find infobox
+497/543 parse失敗 : ら
+498/543 parse成功 : 大乗寺
+499/543 parse成功 : 金剛證寺
+500/543 parse成功 : 岩船寺
+501/543 parse成功 : 本能寺
+this is not temple page
+502/543 parse失敗 : 名古屋市
+503/543 parse成功 : 興正寺
+504/543 parse成功 : 長寿寺
+505/543 parse成功 : 常楽寺
+506/543 parse成功 : 塔福寺
+507/543 parse成功 : 清巌寺
+can't find infobox
+508/543 parse失敗 : アフリカ
+509/543 parse成功 : 初馬寺
+can't find infobox
+510/543 parse失敗 : 宗派
+can't find infobox
+511/543 parse失敗 : 中東
+can't find infobox
+512/543 parse失敗 : 涅槃寂静
+513/543 parse成功 : 櫟野寺
+can't find infobox
+514/543 parse失敗 : 地域別仏教
+515/543 parse成功 : 龍源院
+can't find infobox
+516/543 parse失敗 : 国宝
+517/543 parse成功 : 大慈寺
+this is not temple page
+518/543 parse失敗 : 南区
+can't find infobox
+519/543 parse失敗 : 台湾
+520/543 parse成功 : 横蔵寺
+can't find infobox
+521/543 parse失敗 : 四諦
+522/543 parse成功 : 泉涌寺
+523/543 parse成功 : 寿福寺
+524/543 parse成功 : 妙満寺
+525/543 parse成功 : 橘寺
+526/543 parse成功 : 満願寺
+527/543 parse成功 : 鞍馬寺
+528/543 parse成功 : 興禅寺
+529/543 parse成功 : 智積院
+530/543 parse成功 : 大雄寺
+531/543 parse成功 : 中禅寺
+this is not temple page
+532/543 parse失敗 : 最上稲荷
+can't find infobox
+533/543 parse失敗 : 高僧
+534/543 parse成功 : 矢田寺
+535/543 parse成功 : 円通寺
+536/543 parse成功 : 能福寺
+537/543 parse成功 : 勝尾寺
+538/543 parse成功 : 徹心寺
+539/543 parse失敗 : 編
+can't find infobox
+540/543 parse失敗 : 中国
+541/543 parse成功 : 深大寺
+542/543 parse成功 : 補陀洛山寺
+543/543 parse成功 : 慈照寺

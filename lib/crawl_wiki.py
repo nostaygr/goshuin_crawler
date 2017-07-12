@@ -3,6 +3,7 @@
 
 import requests
 from bs4 import BeautifulSoup
+import api
 
 
 TEMPLE_JUDGE_LIST = ["寺", "院", "師"]
