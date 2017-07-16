@@ -5,62 +5,62 @@ import glob
 
 def read_files(path):
     files_path = glob.glob(path)
-    lst = []
+    list = []
     for file_path in files_path:
         with open(file_path, 'r') as f:
             for line in f:
-                lst.append(line.rstrip().split(','))
-    return lst
+                list.append(line.rstrip().split(','))
+    return list
 
 
 def read_rank_file(path):
-    dic = {}
+    dict = {}
     with open(path, 'r') as f:
         for line in f:
             item = line.rstrip().split(',')
-            dic[item[1]] = item[0]
-    return dic
+            dict[item[1]] = item[0]
+    return dict
 
 
-def replace_rank(worship_lst, rank_dic):
-    for idx, worship in enumerate(worship_lst):
-        if worship[0] in rank_dic:
-            worship_lst[idx][6] = rank_dic[worship[0]]
-    return worship_lst
+def update_rank(worship_list, rank_dict):
+    for idx, worship in enumerate(worship_list):
+        if worship[0] in rank_dict:
+            worship_list[idx][6] = rank_dict[worship[0]]
+    return worship_list
 
 
-def add_placeid(shrines_lst, temples_lst):
+def add_placeid(shrines_list, temples_list):
     place_id = 1
-    for idx, shrine in enumerate(shrines_lst):
-        shrines_lst[idx].insert(0, str(place_id))
+    for idx, shrine in enumerate(shrines_list):
+        shrines_list[idx].insert(0, str(place_id))
         place_id += 1
-    for idx, temple in enumerate(temples_lst):
-        temples_lst[idx].insert(0, str(place_id))
+    for idx, temple in enumerate(temples_list):
+        temples_list[idx].insert(0, str(place_id))
         place_id += 1
 
 
 def main():
-    shrines_lst = read_files('res/shrines_*')
-    temples_lst = read_files('res/temples_*')
+    shrines_list = read_files('res/shrines_*')
+    temples_list = read_files('res/temples_*')
 
-    rank_dic = read_rank_file('res/rank_shrines')
-    shrines_lst = replace_rank(shrines_lst, rank_dic)
+    shrine_rank_dict = read_rank_file('res/rank_shrines')
+    shrines_list = update_rank(shrines_list, shrine_rank_dict)
 
-    add_placeid(shrines_lst, temples_lst)
+    add_placeid(shrines_list, temples_list)
     output_fn = 'res/worship_place'
     with open(output_fn, 'w') as f:
-        for shrine in shrines_lst:
+        for shrine in shrines_list:
             f.write('{0}\n'.format(
                 ','.join([str(i) if i != "" else "" for i in shrine[0:7]])
             ))
-        for temples in temples_lst:
+        for temples in temples_list:
             f.write('{0}\n'.format(
                 ','.join([str(i) if i != "" else "" for i in temples[0:7]])
             ))
 
     output_fn = 'res/shrines'
     with open(output_fn, 'w') as f:
-        for shrine in shrines_lst:
+        for shrine in shrines_list:
             f.write('{0},{1},{2}\n'.format(
                 shrine[0],
                 shrine[7],
@@ -69,7 +69,7 @@ def main():
     
     output_fn = 'res/temples'
     with open(output_fn, 'w') as f:
-        for temple in temples_lst:
+        for temple in temples_list:
             f.write('{0},{1},{2},{3}\n'.format(
                 temple[0],
                 temple[7],
